@@ -12,6 +12,8 @@
 		91911BB31F25697600192832 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91911BB11F25697600192832 /* Main.storyboard */; };
 		91911BB51F25697600192832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91911BB41F25697600192832 /* Assets.xcassets */; };
 		91911BB81F25697600192832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91911BB61F25697600192832 /* LaunchScreen.storyboard */; };
+		91911BC01F259CAA00192832 /* PDF in Resources */ = {isa = PBXBuildFile; fileRef = 91911BBF1F259CAA00192832 /* PDF */; };
+		91911BC21F26B09600192832 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911BC11F26B09600192832 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		91911BB41F25697600192832 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91911BB71F25697600192832 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91911BB91F25697600192832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91911BBF1F259CAA00192832 /* PDF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PDF; sourceTree = "<group>"; };
+		91911BC11F26B09600192832 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 			children = (
 				91911BAD1F25697600192832 /* AppDelegate.swift */,
 				91911BAF1F25697600192832 /* ViewController.swift */,
+				91911BC11F26B09600192832 /* DetailViewController.swift */,
 				91911BB11F25697600192832 /* Main.storyboard */,
 				91911BB41F25697600192832 /* Assets.xcassets */,
 				91911BB61F25697600192832 /* LaunchScreen.storyboard */,
 				91911BB91F25697600192832 /* Info.plist */,
+				91911BBF1F259CAA00192832 /* PDF */,
 			);
 			path = PDFReader;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91911BB81F25697600192832 /* LaunchScreen.storyboard in Resources */,
+				91911BC01F259CAA00192832 /* PDF in Resources */,
 				91911BB51F25697600192832 /* Assets.xcassets in Resources */,
 				91911BB31F25697600192832 /* Main.storyboard in Resources */,
 			);
@@ -137,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91911BC21F26B09600192832 /* DetailViewController.swift in Sources */,
 				91911BB01F25697600192832 /* ViewController.swift in Sources */,
 				91911BAE1F25697600192832 /* AppDelegate.swift in Sources */,
 			);
