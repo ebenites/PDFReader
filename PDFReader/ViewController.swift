@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     //var nombres = ["Lidia", "Erick", "Fernando", "Danilo", "Scoly", "Khalessi", "Olga", "Teofilo", "Ruth", "Santos", "Robert", "Jody", "Pablo", "Luis", "David", "Jaime", "Samuel", "Isabel", "Larry"]
     
-    var nombres = ["pdf1", "pdf2", "pdf3"]
+    var nombres = ["pdf1", "pdf2", "pdf3", "pdf1", "pdf2", "pdf3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let celda = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"Cell")
         celda.textLabel?.text = nombres[indexPath.row]
+        celda.imageView?.image = UIImage(named: "pdf.png")
         
         return celda
         
@@ -45,6 +46,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             detailViewController.nombrePDF = nombres[idPDF]
         }
+    }
+    
+    // to support conditional editing of the table view.
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    
+    
+    // to support editing the table view.
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            nombres.remove(at: indexPath.row) // Primero se elimina del array, luego del tableView
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            //tableView.reloadData() // Mejor usamos deleteRows
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
+    // to support custom title button delete
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Eliminar"
     }
     
 }

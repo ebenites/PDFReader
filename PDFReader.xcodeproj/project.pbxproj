@@ -14,6 +14,9 @@
 		91911BB81F25697600192832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91911BB61F25697600192832 /* LaunchScreen.storyboard */; };
 		91911BC01F259CAA00192832 /* PDF in Resources */ = {isa = PBXBuildFile; fileRef = 91911BBF1F259CAA00192832 /* PDF */; };
 		91911BC21F26B09600192832 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911BC11F26B09600192832 /* DetailViewController.swift */; };
+		91C5633B1F29401000FE515E /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5633A1F29401000FE515E /* DictionaryViewController.swift */; };
+		91C5633D1F2941A600FE515E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5633C1F2941A600FE515E /* SwiftyJSON.swift */; };
+		91C5633F1F2941F500FE515E /* pdf.png in Resources */ = {isa = PBXBuildFile; fileRef = 91C5633E1F2941F500FE515E /* pdf.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		91911BB91F25697600192832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91911BBF1F259CAA00192832 /* PDF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PDF; sourceTree = "<group>"; };
 		91911BC11F26B09600192832 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		91C5633A1F29401000FE515E /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		91C5633C1F2941A600FE515E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		91C5633E1F2941F500FE515E /* pdf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pdf.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,91 @@
 		91911BAC1F25697600192832 /* PDFReader */ = {
 			isa = PBXGroup;
 			children = (
+				91C563441F29499000FE515E /* Resource */,
+				91C563431F29498800FE515E /* Constant */,
+				91C563421F29497D00FE515E /* Utility */,
+				91C563401F29494700FE515E /* StoryBoard */,
+				91C563411F29495B00FE515E /* MVC */,
 				91911BAD1F25697600192832 /* AppDelegate.swift */,
 				91911BAF1F25697600192832 /* ViewController.swift */,
 				91911BC11F26B09600192832 /* DetailViewController.swift */,
+				91C5633A1F29401000FE515E /* DictionaryViewController.swift */,
 				91911BB11F25697600192832 /* Main.storyboard */,
 				91911BB41F25697600192832 /* Assets.xcassets */,
 				91911BB61F25697600192832 /* LaunchScreen.storyboard */,
 				91911BB91F25697600192832 /* Info.plist */,
+				91C5633E1F2941F500FE515E /* pdf.png */,
 				91911BBF1F259CAA00192832 /* PDF */,
+				91C5633C1F2941A600FE515E /* SwiftyJSON.swift */,
 			);
 			path = PDFReader;
+			sourceTree = "<group>";
+		};
+		91C563401F29494700FE515E /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = StoryBoard;
+			sourceTree = "<group>";
+		};
+		91C563411F29495B00FE515E /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				91C563471F2949A600FE515E /* Controller */,
+				91C563461F2949A100FE515E /* View */,
+				91C563451F29499B00FE515E /* Model */,
+			);
+			name = MVC;
+			sourceTree = "<group>";
+		};
+		91C563421F29497D00FE515E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		91C563431F29498800FE515E /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Constant;
+			sourceTree = "<group>";
+		};
+		91C563441F29499000FE515E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		91C563451F29499B00FE515E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		91C563461F2949A100FE515E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		91C563471F2949A600FE515E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				91C563481F2949AF00FE515E /* AppDelegate */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		91C563481F2949AF00FE515E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91911BB81F25697600192832 /* LaunchScreen.storyboard in Resources */,
+				91C5633F1F2941F500FE515E /* pdf.png in Resources */,
 				91911BC01F259CAA00192832 /* PDF in Resources */,
 				91911BB51F25697600192832 /* Assets.xcassets in Resources */,
 				91911BB31F25697600192832 /* Main.storyboard in Resources */,
@@ -146,6 +228,8 @@
 			files = (
 				91911BC21F26B09600192832 /* DetailViewController.swift in Sources */,
 				91911BB01F25697600192832 /* ViewController.swift in Sources */,
+				91C5633B1F29401000FE515E /* DictionaryViewController.swift in Sources */,
+				91C5633D1F2941A600FE515E /* SwiftyJSON.swift in Sources */,
 				91911BAE1F25697600192832 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +396,7 @@
 				91911BBE1F25697600192832 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

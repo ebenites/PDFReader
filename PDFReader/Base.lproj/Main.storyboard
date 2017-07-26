@@ -41,7 +41,13 @@
                             <outlet property="delegate" destination="BYZ-38-t0r" id="ZlZ-nD-HOt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="I9a-96-xk6"/>
+                    <navigationItem key="navigationItem" id="I9a-96-xk6">
+                        <barButtonItem key="rightBarButtonItem" title="Diccionario" id="FUI-fF-Ol3">
+                            <connections>
+                                <segue destination="d0Z-XZ-dtx" kind="show" id="qNO-VR-f4y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Q21-hQ-CLf" kind="show" identifier="pantalla2Segue" id="97P-yh-1Vx"/>
                     </connections>
@@ -104,6 +110,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzT-6v-WiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1084" y="138.98050974512745"/>
+        </scene>
+        <!--Dictionary View Controller-->
+        <scene sceneID="QSx-mL-Us0">
+            <objects>
+                <viewController id="d0Z-XZ-dtx" customClass="DictionaryViewController" customModule="PDFReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aXC-rd-BFu"/>
+                        <viewControllerLayoutGuide type="bottom" id="oDF-YM-TsU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="res-gU-ld8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c5-gB-Ykf">
+                                <rect key="frame" x="0.0" y="57" width="375" height="526"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.90071695549999997" green="0.90713918969999996" blue="0.92640589230000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzL-z0-pDO">
+                                <rect key="frame" x="16" y="629" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="Buscar">
+                                    <color key="titleShadowColor" red="0.3542794588" green="0.67640164049999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buscar:" destination="d0Z-XZ-dtx" eventType="touchUpInside" id="u9b-QW-TMa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diccionario Wiki" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCk-VT-0Y3">
+                                <rect key="frame" x="16" y="28" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <edgeInsets key="layoutMargins" top="16" left="8" bottom="16" right="8"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="doe-Hb-WbP">
+                                <rect key="frame" x="16" y="591" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="GzL-z0-pDO" id="m2y-e8-sNo"/>
+                        <outlet property="textField" destination="doe-Hb-WbP" id="zrZ-4H-oZ1"/>
+                        <outlet property="webView" destination="4c5-gB-Ykf" id="Kxq-FD-Qxp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Tf-X8-h0e" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2752.8000000000002" y="-527.58620689655174"/>
         </scene>
     </scenes>
 </document>
